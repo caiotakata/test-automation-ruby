@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+# lista de gems utilizada no projeto
+gem 'rspec-core' # "coração" (funcionalidades principais) do rspec
+gem 'rspec-expectations' # asserts do rspec, os "expects"
+gem 'selenium-webdriver'
+gem 'faker' # faker é uma gem que gera dados aleatórios
+gem 'cpf_faker' # Gera numero de cpf e cnpj válidos
+
+gem 'page-object' # gem que implementa o padrão de "page objects"
+gem 'require_all' # gem para carregar todos os arquivos de uma pasta
+gem 'pry'
