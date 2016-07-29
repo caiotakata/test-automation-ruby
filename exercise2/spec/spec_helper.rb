@@ -41,7 +41,7 @@ RSpec.configure do |config|
   # bloco de código que vai rodar depois de cada (each) teste (it)
   config.after(:each) do
     # encerrando a instância do webdriver (fecha o browser)
-    # @browser.quit
+    @browser.quit
   end
 
 end

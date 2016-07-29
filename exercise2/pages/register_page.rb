@@ -3,6 +3,8 @@ require 'cpf_faker'
 class RegisterPage
   include PageObject
 
+  attr_accessor :nome, :email, :cpf, :senha
+
   page_url 'https://lojatestetray26092014.commercesuite.com.br/loja/cadastro_layout.php?'
 
   text_field :nome_cliente, id: 'pf_nome_cliente'
@@ -18,7 +20,7 @@ class RegisterPage
   select_list :select_time, id: 'adicional_0'
   button :btn_avancar, class: 'botao-commerce-img'
 
-  def cadastrar_pessoa_fisica(nome , cpf, email, senha)
+  def cadastrar_pessoa_fisica(nome = Faker::Name.name, cpf = Faker::CPF.numeric, email = Faker::Internet.email, senha = '123123')
     self.nome_cliente = nome
     # self.dt_nasc = nasc
     self.cpf = cpf
@@ -28,9 +30,12 @@ class RegisterPage
     self.email_confirm = email
     self.senha = senha
     self.senha_confirm = senha
-    btn_avancar
+    # btn_avancar
   end
+
 end
+
+
 
 
 
